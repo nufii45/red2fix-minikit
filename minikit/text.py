@@ -1,8 +1,8 @@
 import re
+import unicodedata
 
 
 def slugify(text):
     """Turn a title into a URL slug: 'Hello World!' -> 'hello-world'."""
-    text = text.lower()
-    text = re.sub(r"[^a-z0-9]+", "-", text)
-    return text.strip("-")
+    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", text.lower())
