@@ -8,3 +8,4 @@ rubric = [
 restricted_paths = [".github/**", ".red2fix.toml", "setup.py", "pyproject.toml", "setup.cfg"]
 require_proof = true
 budget_usd = 1.00
+web_search = true
