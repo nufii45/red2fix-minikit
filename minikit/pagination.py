@@ -1,5 +1,5 @@
 def page_count(total, page_size):
-    return total // page_size
+    return -(-total // page_size)  # round up so a partial last page counts
 
 
 def paginate(items, page_size):
