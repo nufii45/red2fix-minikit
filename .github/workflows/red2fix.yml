@@ -21,7 +21,7 @@ concurrency:
 
 env:
   RED2FIX_REPO: nufii45/red2fix
-  RED2FIX_SHA: cd9813f5bbc0c2a7e5092ad15de221305a5346b3  # a pinned commit, never a branch
+  RED2FIX_SHA: 10865375fafe3766b86e92013993ad40899eb73c  # a pinned commit, never a branch
   HEAD_SHA: ${{ github.event.pull_request.head.sha }}
   BASE_SHA: ${{ github.event.pull_request.base.sha }}
   PR_NUMBER: ${{ github.event.pull_request.number }}
