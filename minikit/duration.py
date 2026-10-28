@@ -7,4 +7,6 @@ def parse_duration(text):
     if not text.strip() or not match:
         raise ValueError(f"invalid duration: {text!r}")
     hours, minutes, seconds = (int(g) if g else 0 for g in match.groups())
+    if not hours:
+        minutes *= 60  # "5m" means five minutes
     return hours * 3600 + minutes + seconds
